@@ -1,0 +1,52 @@
+.app-shell {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.graph-panel {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+  position: relative;
+}
+
+.chat-panel {
+  width: 360px;
+  flex: 0 0 360px;
+  min-height: 0;
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    flex-direction: column;
+    height: 100dvh;
+  }
+
+  .graph-panel {
+    min-height: 60vh;
+  }
+
+  .chat-panel {
+    width: 100%;
+    flex: 0 0 auto;
+    height: 40vh;
+    border-left: 0;
+    border-top: 1px solid rgba(15, 23, 42, 0.1);
+  }
+}
+
+.react-flow__node {
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 6px 10px;
+  font-size: 12px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+}
+
+.react-flow__controls-button {
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
